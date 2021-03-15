@@ -50,15 +50,16 @@ var list = [
 ]
 
 for(var i=0; i<list.length; i++){
-  if(list[i].health>=10 && list[i].damage>=2 && list[i].warrior==true && list[i].name.includes("a")){
+  if(list[i].health>=10 && list[i].damage>=2 && list[i].warrior==true){
   var nameEle = document.createElement("h1");
   var damageEle = document.createElement("h2");
   var healthEle = document.createElement("h3");
+    if(list[i].name.includes("a")){
+    nameEle.style.color="red"}
   nameEle.innerHTML="Name: " +list[i].name;
   damageEle.innerHTML="Damage: " +list[i].damage;
   healthEle.innerHTML="Health: " +list[i].health;
-  nameEle.style.color ="red";
-   wrapper.appendChild(nameEle);
+  wrapper.appendChild(nameEle);
   wrapper.appendChild(damageEle);
   wrapper.appendChild(healthEle);}
   }
